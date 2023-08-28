@@ -1,9 +1,9 @@
 const {Router}= require("express");
-const {pokemonHandler}= require("../handlers/PokemonHandler")
+const {pokemonHandler,pokemonIdHandler,postPokemonHandler}= require("../handlers/PokemonHandler")
 const pokemonRouter = Router();
 
 pokemonRouter.get("/",pokemonHandler)
-pokemonRouter.get("/:id",)
-pokemonRouter.post("/",)
+pokemonRouter.get("/:id",pokemonIdHandler)
+pokemonRouter.post("/",postPokemonHandler)
 
 module.exports= pokemonRouter

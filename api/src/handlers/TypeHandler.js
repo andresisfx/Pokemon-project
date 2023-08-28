@@ -1,4 +1,4 @@
-const axios =require("axios")
+
 const {getTypes}=require("../controllers/TypeController.js")
 
 const typeHandler = async(req,res)=>{

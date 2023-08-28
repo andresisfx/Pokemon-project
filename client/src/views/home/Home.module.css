@@ -1,0 +1,9 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar elementos horizontalmente */
+  }
+  
+  .itemHome {
+    margin-bottom: 20px; /* Espacio entre SearchBar y Container */
+  }
