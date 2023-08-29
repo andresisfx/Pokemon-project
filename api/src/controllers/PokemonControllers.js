@@ -77,11 +77,11 @@ const getPokemonById = async(id)=>{
 }
 const createPokemon = async(id,name,image,life,attack,defense,speed,height,weight,types)=>{
   console.log(id,name,image,life,attack,defense,speed,height,weight,types)
-
+  
   const newPokemon =await Pokemon.create({
     id,name,image,life,attack,defense,speed,height,weight
   })
-  
+
   const getTypesDb = await Type.findAll({
     where:{
       name:types

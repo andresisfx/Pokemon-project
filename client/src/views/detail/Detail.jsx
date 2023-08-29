@@ -9,6 +9,12 @@ const Detail = () => {
  const [loading,setLoading]=useState(true)
  const [error,setError]=useState(null)
 
+const normalized=(pokemon)=>{
+  return pokemon.map((poke)=>({
+    ...poke,
+    types:poke.types||poke.Types.map((item)=>item.name).join(",").replace(/([^,]+)/g, '"$1"')
+}))
+}
  useEffect(()=>{
    const getPokemon=async()=>{
      try {
@@ -16,9 +22,10 @@ const Detail = () => {
          const response = await axios.get(`http://localhost:3001/pokemon/${id}`)
 
          const pokemon = response.data
-      console.log(pokemon[0].name)
+         console.log(pokemon)
+          const normalPokemon =normalized(pokemon)
          
-         setPokemon(pokemon)
+         setPokemon(normalPokemon)
          setLoading(false)
         }
       } catch (error) {
@@ -42,7 +49,7 @@ const Detail = () => {
   return (
     
     <div>
-      <h1>CONTENIDP</h1>
+      
      <div>
       <h1>Name:</h1>
       <h2>{pokemon[0].name}</h2>
