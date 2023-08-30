@@ -2,38 +2,61 @@
     display: flex;
 }
 .divData{
-    width: 45vw;
-    padding: 20px; 
-    height: 85vh;
+    width: 35vw;
+    margin: 5px;
+    height: 88vh;
     border: solid black 3px;
+    border-radius: 10px;
+    background-image: linear-gradient(163deg, #ca4137 0%, #5ed788 100%);
+
 }
 
 .divImage{
     display: flex;
-    width: 45vw;
+    width: 55vw;
     padding: 20px; 
     justify-content: center;
     height: 85vh;
     align-items: center;
     background-image: linear-gradient(163deg, #f26fcf 0%, #8df87a 100%);
-
-
+    border: solid black 3px;
+    border-radius: 10px;
+    margin: 5px;
+    
 }
 .titleAndText {
     display: flex;
     align-items: center;
     background-image: linear-gradient(163deg, #1324bf 0%, #298c17 100%);
-    
+    border: solid 2px;
+    border-radius: 10px;
+    height: 8vh;
+    margin: 11px;
   }
   
-  .title {
+.title {
     font-size: 35px;
     margin-right: 10px;
     font-weight: bold;
+    background-image: linear-gradient(163deg, #b8a432 0%, #428c17 100%);
+    border: solid black 1px;
+    border-radius: 6px;
+    padding: 2px;
+
+    
   }
   
-  .text {
+.text {
     font-size: 30px;
-    margin: 0;
+    font-weight: bold;
+    background-image: linear-gradient(163deg, #bd1e02 0%, #83e9ed 100%);
+    border: solid black 1px;
+    border-radius: 6px;
+    padding: 2px;
   }
+
+ .image{
+    height: 80vh;
+    width: auto;
+ }
   

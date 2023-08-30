@@ -246,36 +246,44 @@ const Form = () => {
 
  }
   return (
-    <div>
-   <form onSubmit={handleSubmit}>
-      <div>
-       <input type="text" placeholder="Name: (max: 100 letters)" name="name" value={input.name} onChange={handleInputChange}/>
+    <div className={style.main} >
+     <form className={style.cont} onSubmit={handleSubmit}>
+      <div className={style.divInputs}>
+        <label className={style.label}htmlFor="">Name</label>
+       <input className={style.input} type="text" placeholder="Name: (max: 100 letters)" name="name" value={input.name} onChange={handleInputChange}/>
        {errors.name&&<p className={style.errors}>{errors.name}</p>}
-
-       <input type="text" placeholder="image url" name="image" value={input.image}  onChange={handleInputChange}/>
+       <label className={style.label}htmlFor="">Image URL</label>
+       
+       <input className={style.input}type="text" placeholder="image url" name="image" value={input.image}  onChange={handleInputChange}/>
        {errors.image&&<p className={style.errors}>{errors.image}</p>}
-
-       <input type="number" placeholder="HealthScore: (min:1 max:100 points )" name="life" value={input.life} onChange={handleInputChange}/>
+       <label htmlFor="" className={style.label}>Life</label>
+        
+       <input className={style.input}type="number" placeholder="Life: (min:1 max:100 points )" name="life" value={input.life} onChange={handleInputChange}/>
        {errors.life&&<p className={style.errors}>{errors.life}</p>}
-
-       <input type="number" placeholder="HealthScore: (min:1 max:100 points )" name="attack" value={input.attack} onChange={handleInputChange}/>
+       <label className={style.label}htmlFor="">Attack</label>
+         
+       <input className={style.input}type="number" placeholder="attack: (min:1 max:100 points )" name="attack" value={input.attack} onChange={handleInputChange}/>
        {errors.attack&&<p className={style.errors}>{errors.attack}</p>}
-
-       <input type="number" placeholder="HealthScore: (min:1 max:100 points )" name="defense" value={input.defense} onChange={handleInputChange}/>
+       <label className={style.label}htmlFor="">Defense</label>
+        
+       <input className={style.input}type="number" placeholder="defense: (min:1 max:100 points )" name="defense" value={input.defense} onChange={handleInputChange}/>
        {errors.defense&&<p className={style.errors}>{errors.defense}</p>}
-
-       <input type="number" placeholder="HealthScore: (min:1 max:100 points )" name="speed" value={input.speed} onChange={handleInputChange}/>
+       <label className={style.label}htmlFor="">Speed:</label>
+        
+       <input className={style.input}type="number" placeholder="speed: (min:1 max:100 points )" name="speed" value={input.speed} onChange={handleInputChange}/>
        {errors.speed&&<p className={style.errors}>{errors.speed}</p>}
-
-       <input type="number" placeholder="HealthScore: (min:1 max:100 points )" name="height" value={input.height} onChange={handleInputChange} />
+       <label className={style.label} htmlFor="">Height</label>
+         
+       <input className={style.input}type="number" placeholder="height: (min:1 max:100 points )" name="height" value={input.height} onChange={handleInputChange} />
        {errors.height&&<p className={style.errors}>{errors.height}</p>}
-
-       <input type="number" placeholder="HealthScore: (min:1 max:100 points )" name="weight" value={input.weight} onChange={handleInputChange} />
+       <label htmlFor="" className={style.label}>Weight</label>
+        
+       <input className={style.input} type="number" placeholder="weight: (min:1 max:100 points )" name="weight" value={input.weight} onChange={handleInputChange} />
        {errors.weight&&<p className={style.errors}>{errors.weight}</p>}
 
       </div>
-      <div>
-        <h3>Choose your pokemontype</h3>
+      <div className={style.divChoose}>
+        <h3 className={style.label}>Choose your pokemontype</h3>
       {Array.isArray(types)&&types.map((type)=>(
         <div key={type.name}>
           <input 
@@ -284,9 +292,9 @@ const Form = () => {
           name="types"
           onChange={()=>handleChangetypes(type.name)}
           checked={isChecked(type.name)}
-          
+          className={style.inputChoise}
           />
-         <label htmlFor={`check-${type.name}`}>{type.name}</label>
+         <label className={style.labelChoose} htmlFor={`check-${type.name}`}>{type.name}</label>
 
         </div>
       ))}
@@ -294,11 +302,11 @@ const Form = () => {
        
       </div>
      
-      <div>
+      <div className={style.divButton}>
         <Link to="/home">
-          <button>Back home</button>
+          <button className={style.button}>Back home</button>
         </Link>
-          <button type='submit'>Create pokemon</button> 
+          <button className={style.button} type='submit'>Create pokemon</button> 
       </div>
     </form>
     </div>

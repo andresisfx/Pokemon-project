@@ -97,7 +97,7 @@ const normalized=(pokemon)=>{
       </div>
     </div>
     <div className={style.divImage}>
-      <img src={pokemon[0].image} alt={pokemon[0].name} />
+      <img className={style.image} src={pokemon[0].image} alt={pokemon[0].name} />
     </div>
   </div>
   
