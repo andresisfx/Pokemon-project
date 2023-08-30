@@ -31,12 +31,14 @@ const SearchBar = () => {
   }
   
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="">Search a pokemon</label>
+    <div className={style.cont}>
+      <form className={style.form} onSubmit={handleSubmit}>
+        <label className={style.label}>Search a pokemon</label>
+        <div className={style.inputDiv}>
         <input className={style.input}  value={input} type="text" onChange={handleChange} placeholder='Type here'/>
         {errors?<p className={style.errors}>{errors}</p>:null}
-        <button type="submit">Search</button>
+        <button className={style.button} type="submit">Search</button>
+        </div>
       </form>
     </div>
   )

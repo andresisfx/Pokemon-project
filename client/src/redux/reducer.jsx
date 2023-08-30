@@ -1,4 +1,4 @@
-import {GET_ALL_POKEMONS,GET_POKEMON_NAME,CLEAN_FILTER,GET_TYPES,FILTER_TYPES, FILTER_ORIGIN, FILTER_ALPHABETICAL } from "./actions"
+import {GET_ALL_POKEMONS,GET_POKEMON_NAME,CLEAN_FILTER,GET_TYPES,FILTER_TYPES, FILTER_ORIGIN, FILTER_ALPHABETICAL, FILTER_ATTACK } from "./actions"
 
 let initialState = {
     allPokemons:[],
@@ -68,9 +68,28 @@ function rootReducer (state= initialState,action){
         }
 
     case FILTER_ALPHABETICAL:
-      let filterAlpha=[]
-          
+      let filteredAlpha=[]
+      action.payload==="AtoZ"?
+      filteredAlpha= [...state.allPokemonsCopy].sort((a,b)=>a.name.toLowerCase().localeCompare(b.name.toLowerCase())):
+      filteredAlpha= [...state.allPokemonsCopy].sort((a,b)=>b.name.toLowerCase().localeCompare(a.name.toLowerCase()))    
       
+      return{
+        ...state,
+        pokemonFiltered:filteredAlpha,
+        filter:true
+        
+      }
+    case FILTER_ATTACK:
+      let filteredAttack=[]
+      action.payload==="1to100"?
+      filteredAttack= [...state.allPokemonsCopy].sort((a,b)=>a.attack-b.attack):
+      filteredAttack= [...state.allPokemonsCopy].sort((a,b)=>b.attack-a.attack)
+      return{
+        ...state,
+        pokemonFiltered:filteredAttack,
+        filter:true
+      }
+
     default:
      return {...state};    
  }

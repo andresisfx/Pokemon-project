@@ -1,0 +1,39 @@
+.content{
+    display: flex;
+}
+.divData{
+    width: 45vw;
+    padding: 20px; 
+    height: 85vh;
+    border: solid black 3px;
+}
+
+.divImage{
+    display: flex;
+    width: 45vw;
+    padding: 20px; 
+    justify-content: center;
+    height: 85vh;
+    align-items: center;
+    background-image: linear-gradient(163deg, #f26fcf 0%, #8df87a 100%);
+
+
+}
+.titleAndText {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(163deg, #1324bf 0%, #298c17 100%);
+    
+  }
+  
+  .title {
+    font-size: 35px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .text {
+    font-size: 30px;
+    margin: 0;
+  }
+  

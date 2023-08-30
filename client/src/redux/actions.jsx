@@ -7,6 +7,7 @@ export const GET_TYPES = "GET_TYPES"
 export const FILTER_TYPES="FILTER_TYPES"
 export const FILTER_ORIGIN="FILTER_ORIGIN"
 export const FILTER_ALPHABETICAL="FILTER_ALPHABETICAL"
+export const FILTER_ATTACK="FILTER_ATTACK"
 
 const normalizedTypes= (pokemons)=>{
     return pokemons.map((poke)=>({
@@ -86,4 +87,11 @@ export function filterAlphabetical (direction){
     type:FILTER_ALPHABETICAL,
     payload:direction
    }
+}
+
+export function filterAttack (direction){
+    return{
+        type:FILTER_ATTACK,
+        payload:direction
+    }
 }

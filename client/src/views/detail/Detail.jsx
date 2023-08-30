@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useState,useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import style from"./Detail.module.css"
 
 const Detail = () => {
  const {id}=useParams()
@@ -37,43 +38,69 @@ const normalized=(pokemon)=>{
  },[])
 
  if(Object.keys(pokemon).length===0){
-  return <div><h1>Detail loading</h1></div>
+  return <div><h1 >Detail loading</h1 ></div>
  }
  if(loading){
-  return<div><h1>...Loading</h1></div>
+  return<div><h1 >...Loading</h1 ></div>
  }
  if(error){
-  return <div><h1>{error}</h1></div>
+  return <div><h1 >{error}</h1 ></div>
  }
 //  console.log(pokemon)
   return (
     
-    <div>
-      
-     <div>
-      <h1>Name:</h1>
-      <h2>{pokemon[0].name}</h2>
-      <h1>Id:</h1>
-      <h2>{pokemon[0].id}</h2>
-      <h1>Life:</h1>
-      <h2>{pokemon[0].life}</h2>
-      <h1>Attack:</h1>
-      <h2>{pokemon[0].attack}</h2>
-      <h1>Defense:</h1>
-      <h2>{pokemon[0].defense}</h2>
-      <h1>Speed:</h1>
-      <h2>{pokemon[0].speed}</h2>
-      <h1>Height:</h1>
-      <h2>{pokemon[0].height}</h2>
-      <h1>Weight:</h1>
-      <h2>{pokemon[0].weight}</h2>
-      <h1>Types:</h1>
-      <h2>{pokemon[0].types}</h2>
+    <div className={style.content}>
+    <div className={style.divData}>
+      <div className={style.titleAndText}>
+        <h1 className={style.title}>Name:</h1>
+        <h2 className={style.text}>{pokemon[0].name}</h2>
+      </div>
+  
+      <div className={style.titleAndText}>
+        <h1 className={style.title}>Id:</h1>
+        <h2 className={style.text}>{pokemon[0].id}</h2>
+      </div>
+  
+      <div className={style.titleAndText}>
+        <h1 className={style.title}>Life:</h1>
+        <h2 className={style.text}>{pokemon[0].life}</h2>
+      </div>
+  
+      <div className={style.titleAndText}>
+        <h1 className={style.title}>Attack:</h1>
+        <h2 className={style.text}>{pokemon[0].attack}</h2>
+      </div>
+  
+      <div className={style.titleAndText}>
+        <h1 className={style.title}>Defense:</h1>
+        <h2 className={style.text}>{pokemon[0].defense}</h2>
+      </div>
+  
+      <div className={style.titleAndText}>
+        <h1 className={style.title}>Speed:</h1>
+        <h2 className={style.text}>{pokemon[0].speed}</h2>
+      </div>
+  
+      <div className={style.titleAndText}>
+        <h1 className={style.title}>Height:</h1>
+        <h2 className={style.text}>{pokemon[0].height}</h2>
+      </div>
+  
+      <div className={style.titleAndText}>
+        <h1 className={style.title}>Weight:</h1>
+        <h2 className={style.text}>{pokemon[0].weight}</h2>
+      </div>
+  
+      <div className={style.titleAndText}>
+        <h1 className={style.title}>Types:</h1>
+        <h2 className={style.text}>{pokemon[0].types}</h2>
+      </div>
     </div>
-    <div>
+    <div className={style.divImage}>
       <img src={pokemon[0].image} alt={pokemon[0].name} />
     </div>
-    </div>
+  </div>
+  
   )
 }
 

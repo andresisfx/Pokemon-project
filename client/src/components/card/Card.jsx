@@ -9,11 +9,11 @@ function Card({id,image,types,name}) {
       <div className={style.title} >
         <div className={style.letterDiv}>
         <h3 className={style.text}>Name: {name}</h3>
-         <h3>Type: {Array.isArray(types)?types.map((item)=>
+         <h3 className={style.text}>Type: {Array.isArray(types)?types.map((item)=>
         
-          <li key={item.name}>{item.name}</li>
+          {item.name}
           
-        ):<li key={types}>{types}</li>}
+        ):types}
          </h3>
         </div>
         <div className={style.imageDiv}>
