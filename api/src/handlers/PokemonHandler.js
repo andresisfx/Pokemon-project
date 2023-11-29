@@ -3,14 +3,6 @@ const {allPokemon,createPokemon,getPokemonById,getPokemonByname} = require("../c
 const pokemonHandler = async(req,res)=>{
   const {name}=req.query
   try {
-    // const page = parseInt(req.query.page) || 1;
-    //     const limit = parseInt(req.query.limit) || 50; 
-
-    //     const offset = (page -1) * limit;
-    //     console.log(`Page: ${page}, Limit: ${limit}, Offset: ${offset}`);
-    //     const pokemonReady = await getPokemonsApi(offset, limit);
-    
-
     const pokemonReady= name? await getPokemonByname(name):await allPokemon()
    
    
