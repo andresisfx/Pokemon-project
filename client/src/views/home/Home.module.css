@@ -1,4 +1,4 @@
-.main {
+/* .main {
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -104,4 +104,111 @@
     transform: scale(1.05);
     border: solid 2px blue;
     background-image: linear-gradient(163deg, #efae6c 0%, #4d9cd4 100%);
+  } */
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
   }
+  
+  .contItems {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap; /* Para que los elementos se envuelvan a la siguiente línea si no hay suficiente espacio */
+    justify-content: space-around; /* Ajusta el espacio entre los elementos */
+    margin-bottom: 20px; /* Aumenta el margen inferior */
+    
+  }
+  
+  .allButtonDiv {
+    margin-bottom: 20px; 
+    width: 5vw;
+    display: flex;
+  }
+  
+  .allButton {
+    background-image: linear-gradient(163deg, #2103cb 0%, #ffffff 100%);
+    width: 200px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 10px;
+    border: solid black 2px;
+    font-weight: bolder;
+  }
+  
+  .allButton:hover {
+    box-shadow: 0px 0px 50px 25px rgba(5, 47, 237, 0.3);
+    transform: scale(1.05);
+    border: solid 2px blue;
+    background-image: linear-gradient(163deg, #efae6c 0%, #29a1f6 100%);
+  }
+  
+  .searchBar {
+    width: 150px;
+    display: flex;
+  }
+  
+  .Items {
+    background-image: linear-gradient(163deg, #31dfe8 0%, #ddff00 100%);
+    width: 15vw;
+    border-radius: 10px;
+    height: 110px;
+    border: solid black 3px;
+    margin: 5px;
+    padding: 10px; /* Ajusta el espacio interno */
+    display: grid;
+    grid-template-rows: 50% 50%;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho y alto total */
+  }
+  
+  .label,
+  .select {
+    width: 13vw;
+    margin: 5px;
+    border: solid black 1px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 2px;
+  }
+  
+  .select:hover {
+    box-shadow: 0px 0px 50px 25px rgba(5, 47, 237, 0.3);
+    transform: scale(1.05);
+    border: solid 2px blue;
+    background-image: linear-gradient(163deg, #efae6c 0%, #29a1f6 100%);
+  }
+  
+  .paginateDiv {
+    width: 100vw;
+    height: 10vh;
+    background-image: linear-gradient(163deg, #bfae13 0%, #22600d 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px rgb(0, 0, 0);
+    border-radius: 15px;
+    bottom: 0;
+    position: sticky;
+  }
+  
+  .buttonPag {
+    background-image: linear-gradient(163deg, #14c4b2 0%, #4e578e 100%);
+    width: 7vw;
+    border: solid black 1px;
+    border-radius: 10px;
+    font-weight: bold;
+    height: 3vh;
+    margin-top: 10px;
+    padding: 2px;
+    margin-right: 5px;
+  }
+  
+  .buttonPag:hover {
+    box-shadow: 0px 0px 50px 25px rgba(5, 47, 237, 0.3);
+    transform: scale(1.05);
+    border: solid 2px blue;
+    background-image: linear-gradient(163deg, #efae6c 0%, #4d9cd4 100%);
+  }
+  
