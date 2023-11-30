@@ -46,7 +46,6 @@ const normalized=(pokemon)=>{
  if(error){
   return <div><h1 >{error}</h1 ></div>
  }
-//  console.log(pokemon)
   return (
     
     <div className={style.content}>

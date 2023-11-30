@@ -201,7 +201,7 @@ const Form = () => {
   input.speed===""||
   input.height===""||
   input.weight===""||
-  input.types===[]){
+  input.types===false){// aqui habia un array vacio lo cambie por false porque daba un error
     alert("please fiil all required fields")
   }
   console.log(input)
